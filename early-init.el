@@ -35,9 +35,18 @@
 ;; needed nor loaded on those versions.
 (setq package-enable-at-startup nil)
 
-(load (concat (file-name-directory load-file-name)
-              "core/core-early-funcs.el")
-      nil (not init-file-debug))
+(load "~/spacemacs/init-straight.el")
 
 ;; Remove GUI elements early to avoid some possible grapical glitches.
 (spacemacs/removes-gui-elements)
+
+;; These are needed after removing copies from core/libs.
+(use-package dash :defer t)
+(use-package ht :defer t)
+(use-package ido-vertical-mode :defer t)
+(use-package load-env-vars :defer t)
+(use-package mocker :defer t)
+(use-package package-build :defer t)
+(use-package page-break-lines :defer t)
+(use-package quelpa :defer t)
+(use-package spinner :defer t)
