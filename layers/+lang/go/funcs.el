@@ -57,6 +57,11 @@
       (add-hook 'before-save-hook 'gofmt-before-save)
     (remove-hook 'before-save-hook 'gofmt-before-save)))
 
+(defun spacemacs//go-setup-jump-handlers ()
+  (pcase (spacemacs//go-backend)
+    (`go-mode (spacemacs|define-jump-handlers go-mode godef-jump))
+    (t (spacemacs|define-jump-handlers go-mode))))
+
 
 ;; lsp
 

@@ -136,6 +136,13 @@
     (progn
       ;; get go packages much faster
       (setq go-packages-function 'spacemacs/go-packages-gopkgs)
+      (add-hook 'go-mode-hook 'spacemacs//go-set-tab-width)
+      (add-hook 'go-mode-local-vars-hook
+                #'spacemacs//go-setup-backend)
+      (spacemacs//go-setup-jump-handlers)
+      (dolist (value '(lsp go-mode))
+        (add-to-list 'safe-local-variable-values
+                     (cons 'go-backend value)))
       (spacemacs|add-toggle go-test-verbose
         :documentation "Enable verbose test output."
         :status go-test-verbose
