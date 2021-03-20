@@ -47,6 +47,11 @@
     (`lsp (require 'dap-go)
           (dap-go-setup))))
 
+(defun spacemacs//go-setup-jump-handlers ()
+  (pcase (spacemacs//go-backend)
+    (`go-mode (spacemacs|define-jump-handlers go-mode godef-jump))
+    (t (spacemacs|define-jump-handlers go-mode))))
+
 
 ;; lsp
 

@@ -11,8 +11,6 @@
 
 ;; variables
 
-(spacemacs|define-jump-handlers go-mode godef-jump)
-
 (defvar go-backend nil
   "The backend to use for IDE features.
 Possible values are `go-mode' and `lsp'.

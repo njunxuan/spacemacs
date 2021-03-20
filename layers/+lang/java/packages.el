@@ -17,7 +17,6 @@
     ggtags
     counsel-gtags
     helm-gtags
-    (java-mode :location built-in)
     maven-test-mode
     (meghanada :toggle (not (version< emacs-version "25.1")))
     mvn

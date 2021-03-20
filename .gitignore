@@ -94,3 +94,7 @@ gtags.files
 eln-cache/
 meghanada/
 vimish-fold/
+straight/
+smex-items
+layouts/
+custom.el

@@ -18,7 +18,6 @@
         ;; the emacs wiki, we fetch it from Emacs Mirror for now.
         ;; TODO eventually remove this if font-lock+ is available
         ;; in an ELPA repository.
-        (font-lock+ :step pre)
         neotree
         spaceline
         spaceline-all-the-icons
